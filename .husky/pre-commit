@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+yarn eslint "src/**/*.{vue,ts,tsx}" --fix --max-warnings=0
