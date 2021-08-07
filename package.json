@@ -7,7 +7,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
-    "lint:eslint": "eslint \"src/**/*.{vue,ts,tsx}\" --fix"
+    "lint:eslint": "eslint \"src/**/*.{vue,ts,tsx}\" --fix",
+    "install:husky": "is-ci || husky install",
+    "postinstall": "npm run install:husky"
   },
   "dependencies": {
     "vue": "^3.0.5"
